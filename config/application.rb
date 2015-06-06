@@ -22,5 +22,7 @@ module EatmatesV1
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    # For vendor/assets/bower_components
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
   end
 end
