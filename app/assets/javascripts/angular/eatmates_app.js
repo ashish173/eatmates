@@ -1,7 +1,8 @@
 (function(){
   angular
     .module('eatmates', [
-      'ui.router'
+      'ui.router',
+      'ngAnimate'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
@@ -10,7 +11,7 @@
           .state('home', {
             url: '/home',
             templateUrl: '/assets/home/index.html',
-            controller: 'HomeCtrl'
+            controller: 'HomeCtrl as vm'
           });
 
         $urlRouterProvider.otherwise('/');  

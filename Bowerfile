@@ -4,3 +4,6 @@
 # asset 'bootstrap'
 asset 'angularjs'
 asset 'lodash'
+asset 'angular-animate'
+asset 'bootstrap-sass-official'
+asset 'ui-router'
