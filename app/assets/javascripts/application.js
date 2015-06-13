@@ -14,7 +14,13 @@
 //= require jquery_ujs
 //= require lodash
 
+
 // ******************* Angularjs ******************
 //= require angularjs/angular
+//= require ui-router/release/angular-ui-router
 
+// Templates in app/assets/javascript/templates
+//= require_tree ./templates
+
+//= require_tree ../templates
 //= require_tree .
