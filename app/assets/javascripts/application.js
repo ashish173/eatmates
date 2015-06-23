@@ -21,5 +21,8 @@
 
 // ******************* Angularjs libs**************
 //= require angular-animate/angular-animate	
+//= require angularjs-toaster/toaster
+//= require angular-resource/angular-resource
+//= require angular-material/angular-material
 //= require_tree ../templates
 //= require_tree .

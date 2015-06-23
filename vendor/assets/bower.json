@@ -5,6 +5,9 @@
     "lodash": "latest",
     "angular-animate": "latest",
     "bootstrap-sass-official": "latest",
-    "ui-router": "latest"
+    "ui-router": "latest",
+    "angularjs-toaster": "latest",
+    "angular-resource": "latest",
+    "angular-material": "latest"
   }
 }

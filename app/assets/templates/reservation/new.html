@@ -1,1 +1,62 @@
-<p> On reservation create page </p>
+<div class="container col-lg-5 col-lg-offset-3">
+	<h3> Create a reservation </h3>
+
+	<form class="form-horizontal" role="form">
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="email" >Name:</label>
+	    <div class="col-sm-10">
+	    	<input type="text" placeholder="Umesh" ng-model="vm.reservation.name" class="form-control">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Place:</label>
+	    <div class="col-sm-10">
+	    	<input ng-model="vm.reservation.place" type="text" placeholder="Baner, Pune" class="form-control">
+	  	</div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Restaurant name:</label>
+	    <div class="col-sm-10"> 
+	    	<input ng-model="vm.reservation.restaurant_name" type="text" placeholder="Malaka spice" class="form-control">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Date:</label>
+	    <div class="col-sm-10">
+	    	<input ng-model="vm.reservation.time_of_reservation" type="text" placeholder="DD/MM/YY" class="form-control">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Proposition:</label>
+	    <div class="col-sm-10">
+	    	<input ng-model="vm.reservation.proposition" type="text" placeholder="proposition for guests" class="form-control">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Number of guests:</label>
+	    <div class="col-sm-10">
+	    	<input ng-model="vm.reservation.guests_number_pref" type="number" placeholder="1" class="form-control">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Gender preference:</label>
+	    <div class="col-sm-10">
+	    	<input ng-model="vm.reservation.gender_pref" type="text" placeholder="Select gender" class="form-control">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="pwd">Liquor preference:</label>
+	    <div class="col-sm-10">
+	    	<input ng-model="vm.reservation.liquor_pref" type="text" placeholder="yes/no" class="form-control">
+	    </div>
+	  </div>
+		<div class="form-group">
+		  <div class="col-sm-offset-2 col-sm-10">
+		   	<button type="submit" class="btn btn-primary" ng-click="vm.submit()">Confirm</button>
+			</div>
+		</div>
+	</form>
+	<div class="col-lg-3 row">
+		First name : {{vm.firstName}}
+	</div>
+</div>

@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 gem 'devise', '~> 3.5.1'
 gem 'bower-rails'
-
+gem 'pry'
 # For managing rails templates
 gem 'angular-rails-templates'
 # Use ActiveModel has_secure_password

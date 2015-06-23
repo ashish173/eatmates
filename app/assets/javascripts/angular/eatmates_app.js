@@ -2,7 +2,8 @@
   angular
     .module('eatmates', [
       'ui.router',
-      'ngAnimate'
+      'ngAnimate',
+      'ngResource'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 

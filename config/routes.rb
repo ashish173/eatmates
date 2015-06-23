@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
   namespace :api do
     namespace :v1 do
-      resources :reservation
+      resources :reservations
+    end
+  end
+  resources :welcome do
+    collection do
+      get 'user'
     end
   end
   # Example of regular route:

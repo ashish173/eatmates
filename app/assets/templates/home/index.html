@@ -1,7 +1,28 @@
-<div class="container">
-    <h1>All people going out this weekend</h1>
-    <ul>
-        <li ng-repeat="reservation in vm.reservations">{{reservation}}</li>
-    </ul>
-    <div ui-sref="reservation.create"><a href="javascript:;">Click to create reservation</a></div>
+
+<div class="container col-lg-8 col-lg-offset-2">
+    <div ng-repeat="reservation in vm.reservations">
+      <div class="row">
+        <md-content class="md-padding">
+          <md-card>
+            <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+            <md-card-content>
+              <h2>{{user.name}}</h2>
+              <p>
+                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+              </p>
+            </md-card-content>
+            <div class="md-actions" layout="row" layout-align="end center">
+              <md-button>Action 1</md-button>
+              <md-button>Action 2</md-button>
+            </div>
+          </md-card>
+        </md-content>
+
+      </div>
+    </div>
+    <br><br>
+    <div ui-sref="reservation.create"><a class="btn btn-primary" href="javascript:;">New Reservation</a></div>
+    <br><br>
+    
 </div>

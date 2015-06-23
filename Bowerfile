@@ -7,3 +7,7 @@ asset 'lodash'
 asset 'angular-animate'
 asset 'bootstrap-sass-official'
 asset 'ui-router'
+asset 'angularjs-toaster'
+asset 'angular-resource'
+asset 'angular-material'
+
