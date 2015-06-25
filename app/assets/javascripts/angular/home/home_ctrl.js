@@ -8,7 +8,7 @@
 			console.log('In home controller');
 			var vm = this;
 
-			Reservation.get()
+			Reservation.get({page: 1})
 				.$promise
 				.then(function(response){
 					console.log(response);

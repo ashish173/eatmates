@@ -3,7 +3,8 @@
     .module('eatmates', [
       'ui.router',
       'ngAnimate',
-      'ngResource'
+      'ngResource',
+      'ngMaterial'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 

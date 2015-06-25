@@ -2,7 +2,8 @@ class Api::V1::ReservationsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @reservations = Reservation.all
+    page = params[:page]
+    @reservations = Reservation.page(page)
     render json: { reservations: 
       @reservations.as_json(only: [:restaurant_name, :place, :time_of_reservation,
        :proposition, :guests_number_pref, :gender_pref, :liquor_pref], 
