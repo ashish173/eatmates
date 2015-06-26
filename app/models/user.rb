@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
   validates_inclusion_of :gender, in: %w(male female other)
   validates_inclusion_of :age, in: 18..99
 end
