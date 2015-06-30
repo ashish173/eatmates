@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.find_or_initialize_by(
-  name: "Test user",
-  email: "testuser@eatmates.com",
+  name: "Test user 1",
+  email: "testuser1@eatmates.com",
   gender: "male",
   age: 23
 ).update(password: "test123")
@@ -19,7 +19,7 @@ User.find_or_initialize_by(
   age: 23
 ).update(password: "test123")
 
-user1 = User.find_by(name: 'Test user')
+user1 = User.find_by(name: 'Test user 1')
 user2 = User.find_by(name: 'Test user 2')
 
 Reservation.destroy_all
@@ -32,7 +32,7 @@ Reservation.destroy_all
     time_of_reservation:  Time.now,
     proposition:          'Your dinner your choice!!!!',
     guests_number_pref:   2,
-    gender_pref:          'Male',
+    gender_pref:          'male',
     liquor_pref:          'Yes',
     user:                 user
   )
