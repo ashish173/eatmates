@@ -26,7 +26,12 @@ class SessionsController < ApplicationController
     end
 	end
 
-	
+	# Signout
+	def destroy
+		# remove jwt token
+	end
+
+
 	private
 
 	# Load the user
