@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :reservations, dependent: :destroy
+  has_many :comments, dependent: :destroy
+
   validates_inclusion_of :gender, in: %w(male female other)
   validates_inclusion_of :age, in: 18..99
 end

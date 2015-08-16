@@ -27,5 +27,13 @@ module EatmatesV1
     config.assets.paths << Rails.root.join("vendor","assets","bower_components")
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official", "assets","fonts")
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
   end
 end
