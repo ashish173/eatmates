@@ -11,19 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150714043344) do
+ActiveRecord::Schema.define(version: 20150814062804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "devices", force: :cascade do |t|
-    t.string   "device_id"
-    t.string   "auth_token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-  end
 
   create_table "comments", force: :cascade do |t|
     t.string   "message"
@@ -35,6 +26,14 @@ ActiveRecord::Schema.define(version: 20150714043344) do
 
   add_index "comments", ["reservation_id"], name: "index_comments_on_reservation_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+
+  create_table "devices", force: :cascade do |t|
+    t.string   "device_id"
+    t.string   "auth_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.string   "restaurant_name"
@@ -63,9 +62,6 @@ ActiveRecord::Schema.define(version: 20150714043344) do
     t.text     "photo_url"
     t.string   "eating_habits"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "comments", "reservations"
   add_foreign_key "comments", "users"
