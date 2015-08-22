@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   def data_attributes(device)
     {
       user: {
-        name: '#{fname lname}',
+        name: "#{fname} #{lname}",
         username: username,
         email: email,
         api_key: device.api_key,
