@@ -18,3 +18,6 @@ config/jwt_secret.yml
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore the gemset file
+.ruby-gemset

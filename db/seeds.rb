@@ -26,14 +26,20 @@ Reservation.destroy_all
 
 (1..45).each do |num|
   user = num <= 22 ? user1 : user2
-  Reservation.create(
+  reservation = Reservation.create(
     restaurant_name:      'Malaka spice',
     place:                'Baner, Pune',
     time_of_reservation:  Time.now,
     proposition:          'Your dinner your choice!!!!',
     guests_number_pref:   2,
-    gender_pref:          'male',
+    gender_pref:          ['male', 'female'][rand(0..1)],
     liquor_pref:          'Yes',
     user:                 user
   )
+
+  reservation.comments.create(
+    message: "test comment no #{rand(0..99999)}",
+    user: user
+  )
+
 end

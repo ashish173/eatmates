@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   #root 'welcome#index'
   namespace :api do
     namespace :v1 do
-      resources :reservations
+      resources :reservations do
+        resources :comments
+      end
     end
   end
   
